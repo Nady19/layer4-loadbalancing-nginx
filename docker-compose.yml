@@ -1,0 +1,11 @@
+
+version '2'
+
+services:
+    cont1:
+        build: cont1
+
+    proxy:
+        build: proxy
+        ports:
+            -"80:80"
