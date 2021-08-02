@@ -3,26 +3,26 @@
 ***Step by step compilation:***
 
     
-    cd cont1
+    cd webapp
     
 
-    docker build -t con1 .
+    docker build -t webapp .
 
 We will run this image that we have built for 2 separate containers at 2 different ports
 
 
-    docker run -p 8000:80 con1
+    docker run -p 8000:80 webapp
     
 
-    docker run -p 7000:80 con2
+    docker run -p 7000:80 proxy
     
 Open another tereminal and check
 
     sudo docker ps
 
-NOw just executing the second container:
+Now just executing the second container:
 
-    sudo docker exec -it ef684fa3cb5f bash
+    sudo docker exec -it ef684fa3cb5f sh
 
 Changing 2nd Container index.html file from here:
 
@@ -56,4 +56,3 @@ Checking localhost
 
     localhost:80
 
-The docker compose file is not necessary to do all these though. But I suddenly got interested in using it after knowing about it a while ago. It's just good architect and confirming everything.
