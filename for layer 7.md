@@ -10,3 +10,22 @@ if we have a server named webapp then `location /api/v1/webapp` will be added
 and then proxy_pass `http://webapp/`
 
 Other than this everything will be the same.
+
+`http{
+   
+    upstream webapp {
+        server 192.168.0.106:8000;
+        server 192.168.0.106:7000;
+    }
+
+    server {
+         listen 80;
+         location /api/v1/webapp
+              proxy_pass http://webapp/;
+         
+    }
+
+}
+
+
+events { }`
