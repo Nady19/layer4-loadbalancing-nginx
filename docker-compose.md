@@ -39,3 +39,5 @@ Now we can check this layer 2 network device  by
 
 `layer4_load_balancer_with_nginx_default`
 
+`sudo docker network inspect layer4_load_balancer_with_nginx_default` it will show the network range
+
