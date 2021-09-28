@@ -11,7 +11,7 @@ and then proxy_pass `http://webapp/`
 
 Other than this everything will be the same.
 
-`http{
+{http{
    
     upstream webapp {
         server 192.168.0.106:8000;
@@ -28,4 +28,5 @@ Other than this everything will be the same.
 }
 
 
-events { }`
+events { }
+}
